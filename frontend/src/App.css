@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+/* MAIN CONTAINER */
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #1a1a1a;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+/* TITLE */
+h1 {
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* TEXTAREA */
+textarea {
+  width: 100%;
+  height: 130px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #121212;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #888;
+}
+
+textarea:focus {
+  border-color: #666;
+}
+
+/* DROPDOWN */
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background: #121212;
+  color: #fff;
+  border: 1px solid #333;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+select:focus {
+  border-color: #666;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ffffff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #d4d4d4;
+  transform: scale(1.02);
+}
+
+/* OUTPUT BOX */
+.output-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #121212;
+  border-radius: 12px;
+  border: 1px solid #333;
+  text-align: left;
+}
+
+.output-box h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.output-box p {
+  color: #eee;
+  line-height: 1.5;
+}
