@@ -18,7 +18,6 @@ const client = new OpenAI({
 // 🔥 MAIN FUNCTION
 async function rewriteMessage(message, tone) {
 
-  // reduce() use (mandatory)
   const prompt = [message].reduce((acc, curr) => {
     return acc + curr;
   }, "");
@@ -49,7 +48,6 @@ app.post("/ai/rewrite", async (req, res) => {
 
   const validTones = ["professional", "friendly", "apologetic", "confident"];
 
-  // loop validation
   let isValid = false;
   for (let t of validTones) {
     if (t === tone) {
@@ -75,7 +73,7 @@ app.post("/ai/rewrite", async (req, res) => {
   } catch (err) {
     console.log("🔥 FINAL ERROR 👉", err.message);
 
-    // 🔥 FREE FALLBACK (NO API NEEDED)
+    // fallback
     let fakeResponse = "";
 
     if (tone === "professional") {
@@ -97,7 +95,9 @@ app.post("/ai/rewrite", async (req, res) => {
   }
 });
 
-// server start
-app.listen(5000, () => {
-  console.log("Server running on port 5000 🚀");
+// ✅ FIXED SERVER START (IMPORTANT)
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT} 🚀`);
 });
